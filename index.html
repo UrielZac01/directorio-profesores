@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de Profesores</title>
+  <link rel="icon" href="./imagenes/logo-ipn.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms@0.5.3/dist/forms.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        #seccion1 {
+        background-image: url('./imagenes/backgroundCSI.jpg');
+        background-size: cover;
+        background-position: center;
+        color:white;
+        justify-content: center;
+        }
+        #fondo-claro {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        border-radius: 10px;
+        width: 1100px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header>
+        <nav class="text-white p-4 shadow-md fixed w-full z-10 top-0" style="background-color: #6c143c;">
+            <div class="container mx-auto flex justify-between items-center">
+                <a  href="#seccion1" class="text-xl font-bold">
+                    Directorio de Profesores
+                </a>
+                <div class="space-x-4">
+                    <a href="#seccion1" class="hover:underline">Inicio</a>
+                    <a href="#busqueda" class="hover:underline">Buscar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <!-- Página de inicio -->
+  <section id="seccion1" class="min-h-screen flex flex-col justify-center items-center text-black text-center px-6">
+        <div id="fondo-claro">
+            <h1 class="text-5xl font-bold mb-4 animate-pulse">Bienvenido al Directorio de Profesores</h1>
+            <p class="text-lg max-w-2xl mb-6">Aquí podrás buscar información sobre los profesores, su cubículo, correo electrónico y más. Usa la herramienta de búsqueda para encontrarlos fácilmente.</p>
+            <a href="#busqueda" class="bg-white text-purple-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-100 transform hover:scale-105 transition duration-300">Comenzar</a>
+        </div>
+  </section>
+
+  <!-- Sección de búsqueda -->
+  <div id="busqueda" class="max-w-6xl mx-auto p-6">
+    <h2 class="text-4xl font-bold text-center mb-6">Buscar profesor</h2>
+
+    <div class="flex justify-center mb-8">
+      <input id="searchInput" type="text" placeholder="Buscar..." class="w-full max-w-xl px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <button onclick="searchProfessor()" class="bg-purple-600 text-white px-4 py-2 rounded-r-md hover:bg-purple-700 transform hover:scale-105 transition duration-300">Buscar</button>
+    </div>
+
+    <div id="professorsContainer" class="space-y-6">
+      <!-- Tarjetas de profesores -->
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jacqueline Arzate Gordillo">
+        <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+          <h2 class="text-xl font-bold">Jacqueline Arzate Gordillo</h2>
+          <p class="text-sm"><span class="font-medium">Cubículo:</span> 2210</p>
+          <p class="text-sm"><span class="font-medium">Correo:</span> jarzateg@ipn.mx</p>
+          <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jarzateg@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+        <!-- Logo de Teams en PNG (versión oficial) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+        <span>Contactar via Teams</span>
+        </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jose Alfredo Jimenez Benitez">
+        <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+          <h2 class="text-xl font-bold">Jose Alfredo Jimenez Benitez</h2>
+          <p class="text-sm"><span class="font-medium">Cubículo:</span> 2210</p>
+          <p class="text-sm"><span class="font-medium">Correo:</span> jjimenezb@ipn.mx</p>
+          <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jjimenezb@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+        <!-- msteams:/l/chat/0/0?users=jarzateg@ipn.mx -->         
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Alberto Jesus Alcantara Mendez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+          <h2 class="text-xl font-bold">Alberto Jesus Alcantara Mendez</h2>
+          <p class="text-sm"><span class="font-medium">Cubículo:</span> 4205</p>
+          <p class="text-sm"><span class="font-medium">Correo:</span>jalcantaram@ipn.mx</p>
+          <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jalcantaram@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Reyna Elia Melara Abarca">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Reyna Elia Melara Abarca</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> remabarca@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=remabarca@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+        
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Rafael Aguilar Garcia">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Rafael Aguilar Garcia</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3107</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> raguilarg@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=raguilarg@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jorge Cortes Galicia">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Jorge Cortes Galicia</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jcortesg@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jcortesg@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Tania Rodriguez Sarabia">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Tania Rodriguez Sarabia</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> tsarabiar@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=tsarabiar@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Rocio Almazan Farfan">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Rocio Almazan Farfan</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4005</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> ralmazanf@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=ralmazanf@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Edith Margarita Tirado Lule">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Edith Margarita Tirado Lule</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4207</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jtirado@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=ralmazanf@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Miguel Angel Rodriguez Castillo.">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Miguel Ángel Rodríguez Castillo.</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2011</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> marodriguezc@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=marodriguezc@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Edmundo Rene Duran Camarillo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Edmundo René Durán Camarillo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3104</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> eduranc@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=eduranc@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Nidia Asuncion Cortez Duarte">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Nidia Asunción Cortez Duarte</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3205</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> ncortezd@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=ncortezd@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Genaro Juarez Martinez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Genaro Juárez Martínez</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3106</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> gjuarezm@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=gjuarezm@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Karina Viveros Vela">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Karina Viveros Vela</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4206</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> kviveros@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=kviveros@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Rafael Ramírez Tenorio">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Rafael Ramírez Tenorio</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4105</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> rramirezt@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=rramirezt@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Miguel Angel Gonzalez Trujillo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Miguel Ángel González Trujillo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4210</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> mgonzalezt@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=mgonzalezt@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Felipe De Jesus Figueroa Del Prado">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Felipe De Jesús Figueroa Del Prado</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> ffigueroad@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=ffigueroad@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Rocio Resendiz Muñoz">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Rocío Reséndiz Muñoz</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3105</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> rresendizm@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=rresendizm@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jessie Paulina Guzmán Flores">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Jessie Paulina Guzmán Flores</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3110</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jguzmanf@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jguzmanf@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Laura Mendez Segundo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Laura Méndez Segundo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> lmendezs@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=lmendezs@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Levario Medina Sergio">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Levario Medina Sergio</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> slevariom@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=slevariom@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Gloria Lourdes Cabrera Chávez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Gloria Lourdes Cabrera Chavez</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4005</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> gcabrerac@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5587962693</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=gcabrerac@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Ismael Cervantes de Anda">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Ismael Cervantes de Anda</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4205</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> icervantesd@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=icervantesd@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Juan Antonio Castillo Marrufo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Juan Antonio Castillo Marrufo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jcastillom@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jcastillom@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Juan Antonio Castillo Marrufo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Juan Antonio Castillo Marrufo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jcastillom@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jcastillom@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Florencio Guzman Aguilar">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Florencio Guzmán Aguilar</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4104</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> fguzmana@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=fguzmana@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Cecilia Albortante Morato">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Cecilia Albortante Morato</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> calbortantem@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=calbortantem@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Roberto Tecla Parra">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Roberto Tecla Parra</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> rteclap@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=rteclap@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Idalia Maldonado Castillo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Idalia Maldonado Castillo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> imaldonadoc@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=imaldonadoc@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Alexis Testa Nava">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Alexis Testa Nava</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3210</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> atesta@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=atesta@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Ivan Diaz Toala">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Iván Díaz Toala</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 4108</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> idiazt@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=idiazt@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Claudia Alejandra López Rodríguez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Claudia Alejandra López Rodríguez</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3209</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> calopezr@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=calopezr@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Eduardo Rodriguez Flores">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Eduardo Rodríguez Flores</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3105</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> erodriguezf@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=erodriguezf@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Cesar Mujica Ascencio">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">César Mujica Ascencio</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3206</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> cmujica@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=cmujica@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Gelacio Castillo Cabrera">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Gelacio Castillo Cabrera</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3105</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> gcastilloc@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=gcastilloc@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Alejandro Zarate Cardenas">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Alejandro Zárate Cárdenas</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> azaratec@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=azaratec@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Israel Salas Ramírez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Israel Salas Ramírez</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2206</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> isalasr@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=isalasr@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Carlos Juarez Leon">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Carlos Juárez León</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> cjuarezl9201@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5570780016</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=cjuarezl9201@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Ivan Eduardo Blanco Almazan">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Iván Eduardo Blanco Almazán</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> iblancoal2983@hotmail.com</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 722 744 3944</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=iblancoa@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jesus Ortuño Araujo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Jesús Ortuño Araujo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jortunoa1928@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5554326858</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jortunoa1928@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Jose Manuel Lopez Sanchez">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">José Manuel López Sánchez</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jlopezs@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jlopezs@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Buitron Damaso Israel">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Buitrón Dámaso Israel</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> buitron@gmai.com</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=buitron@gmai.com" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Darwin Gutiérrez Mejia">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Darwin Gutiérrez Mejía</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> dgutierrezm@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=dgutierrezm@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Ana Maria Winfield Reyes">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Ana María Winfield Reyes</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> awinfieldr@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=awinfieldr@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Tonahtiu Arturo Ramírez Romero">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Tonahtiu Arturo Ramírez Romero</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 3106</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> tramirezr9291@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5548926231</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=tramirezr9291@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Joel Nava Lara">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Joel Nava Lara</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> jnaval@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=jnaval@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Alejandro Gonzalez Cisneros">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Alejandro Gonzalez Cisneros</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> 2208</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> agonzalezc9103@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5598129742</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=agonzalezc9103@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Laura Lazcano Xoxotla">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Laura Lazcano Xoxotla</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> llazcanox@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=llazcanox@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Ary Compartio Rosas Carrillo">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Ary compartió Rosas Carrillo</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> arosasc@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> 5533268752</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=arosasc@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Adriana Naria Flores Fuentes">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Adriana Naria Flores Fuentes</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> afloresf@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=afloresf@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Raul Santillan Luna">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Raúl Santillán Luna</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> rsantillanl@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=rsantillanl@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow flex items-start space-x-4 transform hover:scale-[1.02] transition duration-300" data-name="Sonia Villegas Navarrete">
+            <img src="./imagenes/logo-escom.png" alt="Foto" class="rounded-full w-20 h-20 object-cover">
+        <div class="flex-1">
+        <h2 class="text-xl font-bold">Sonia Villegas Navarrete</h2>
+        <p class="text-sm"><span class="font-medium">Cubículo:</span> N/A</p>
+        <p class="text-sm"><span class="font-medium">Correo:</span> svillegasn@ipn.mx</p>
+        <p class="text-sm"><span class="font-medium">Teléfono:</span> N/A</p>
+        </div>
+        <a href="msteams:/l/chat/0/0?users=svillegasn@ipn.mx" target="_blank" class="ml-auto inline-flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transform hover:scale-105 transition duration-300">
+            <!-- Logo de Teams en PNG (versión oficial) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png" alt="Logo de Teams" width="20" height="20" class="inline-block">
+            <span>Contactar via Teams</span>
+            </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function normalizeText(text) {
+    return text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
+
+  function searchProfessor() {
+    const input = normalizeText(document.getElementById("searchInput").value);
+    const cards = document.querySelectorAll("#professorsContainer > div");
+
+    cards.forEach(card => {
+      const name = normalizeText(card.getAttribute("data-name"));
+      card.style.display = name.includes(input) ? "flex" : "none";
+    });
+  }
+  </script>
+</body>
+</html>
